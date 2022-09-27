@@ -1,0 +1,20 @@
+[tool.poetry]
+name = "prime-video-api"
+version = "0.1.0"
+description = ""
+authors = ["yuu <yusei8171@gmail.com>"]
+readme = "README.md"
+packages = [{include = "prime_video_api"}]
+
+[tool.poetry.dependencies]
+python = "^3.9"
+fastapi = "^0.85.0"
+uvicorn = "^0.18.3"
+selenium = "^4.4.3"
+chromedriver-binary-auto = "^0.2.0"
+bs4 = "^0.0.1"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
