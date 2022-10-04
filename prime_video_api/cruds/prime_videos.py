@@ -10,6 +10,9 @@ async def search_videos(keyword: str) -> List[prime_videos_schema.Video]:
   url = f'https://www.amazon.co.jp/s?k={keyword}&i=instant-video'
   options = Options()
   options.add_argument('--headless')
+  options.add_argument('--no-sandbox')
+  options.add_argument('--disable-gpu')
+  options.add_argument("--disable-dev-shm-usage")
   driver = webdriver.Chrome(options=options)
   driver.get(url)
   html = driver.page_source.encode('utf-8')
@@ -31,6 +34,9 @@ async def search_videos(keyword: str) -> List[prime_videos_schema.Video]:
 async def get_video_info(getVideoInfoDto: prime_videos_schema.GetVideoInfoDto) -> prime_videos_schema.VideoInfo:
   options = Options()
   options.add_argument('--headless')
+  options.add_argument('--no-sandbox')
+  options.add_argument('--disable-gpu')
+  options.add_argument("--disable-dev-shm-usage")
   driver = webdriver.Chrome(options=options)
   driver.get(getVideoInfoDto.url)
   html = driver.page_source.encode('utf-8')
