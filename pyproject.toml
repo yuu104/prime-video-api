@@ -13,6 +13,8 @@ uvicorn = "^0.18.3"
 selenium = "^4.4.3"
 chromedriver-binary-auto = "^0.2.0"
 bs4 = "^0.0.1"
+webdriver-manager = "^3.8.4"
+packaging = "^21.3"
 
 
 [build-system]

@@ -1,4 +1,4 @@
-from typing import Optional
+from typing import Optional, List
 from pydantic import BaseModel
 
 class Video(BaseModel):
@@ -12,3 +12,6 @@ class VideoInfo(BaseModel):
 
 class GetVideoInfoDto(BaseModel):
   url: str
+
+class LeavingSoonVideos(BaseModel):
+  videos: List[str]
