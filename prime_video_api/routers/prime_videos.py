@@ -9,6 +9,10 @@ router = APIRouter()
 async def search_videos(keyword: str) -> List[prime_videos_schema.Video]:
   return await prime_videos_cruds.search_videos(keyword)
 
+@router.get("/prime_videos_v2", response_model=List[prime_videos_schema.Video])
+async def search_videos_v2(keyword: str) -> List[prime_videos_schema.Video]:
+  return await prime_videos_cruds.search_videos_v2(keyword)
+
 @router.get("/prime_videos/leaving_soon")
 async def get_leaving_soon_videos() -> prime_videos_schema.LeavingSoonVideos:
   return await prime_videos_cruds.get_leaving_soon_videos()

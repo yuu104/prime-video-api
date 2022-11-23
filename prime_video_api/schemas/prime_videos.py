@@ -5,6 +5,7 @@ class Video(BaseModel):
   title: str
   url: str
   image: Optional[str]
+  is_available: bool
 
 class VideoInfo(BaseModel):
   is_available: bool
